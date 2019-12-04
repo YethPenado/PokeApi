@@ -1,14 +1,21 @@
 import React from 'react';
-//import logo from './logo.svg';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Home from './pages/Home';
+import Card from './pages/Card';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+  fetch('https://api.pokemontcg.io/v1/cards')
+    .then(data => data.json())
+    .then(data => {localStorage.setItem('data', JSON.stringify(data))});
 
-      </header>
-    </div>
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path={"/"} component={Home} exact/>
+        <Route path={"/Card"} component={Card}/>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
