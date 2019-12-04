@@ -45,13 +45,15 @@ function Cards(props) {
         <li className="card-info__item">
           <img src={card.imageUrl} className="img--center" alt={card.name} />
           <h2 className="info-title">{card.name}</h2>
-          <h3 className="card-info__title">{card.subType}</h3>
-          <h3 className="card-info__title">Rarity</h3>
-          <p className="card-info__txt">{card.rarity}</p>
-          <h3 className="card-info__title">Attacks</h3>
-          <p className="card-info__txt">{attacks}</p>
-          <h3 className="card-info__title">Resistances</h3>
-          <p className="card-info__txt">{resistances}</p>
+          <div className="info-container">
+            <h3 className="card-info__title">{card.subType}</h3>
+            <h3 className="card-info__title">Rarity</h3>
+            <p className="card-info__txt">{card.rarity}</p>
+            <h3 className="card-info__title">Attacks</h3>
+            <p className="card-info__txt">{attacks}</p>
+            <h3 className="card-info__title">Resistances</h3>
+            <p className="card-info__txt">{resistances}</p>
+          </div>
         </li>
       </ul>
 		</div>

@@ -54,6 +54,10 @@ ul {
   padding: 0;
 }
 
+.card-info__item {
+  width: 50%;
+}
+
 .card__item {
   margin: 25px;
 }
@@ -90,6 +94,12 @@ ul {
 .img--center {
   display: block;
   margin: 0 auto;
+}
+
+.info-container {
+  background-color: rgba(255, 255, 255, 0.776);
+  box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.25);
+  padding: 10px 25px;
 }
 
 .logo {

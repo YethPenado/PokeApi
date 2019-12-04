@@ -19,8 +19,8 @@ function Search() {
   function showMatch(card) {
     return (
       <Link className='match-Card' to={{ pathname: `/card`, cardData: card }}>
-        <img className="match-Card-image" src={card.imageUrl} alt={card.name}/>
-        <h3 className="match-Card-title">{card.name}</h3>
+        <img className="card__image" src={card.imageUrl} alt={card.name}/>
+        <h2 className="card__name">{card.name}</h2>
       </Link>
     )
   }
